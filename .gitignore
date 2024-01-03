@@ -1,0 +1,18 @@
+# Compiled Output
+/node_modules
+
+# OS
+.DS_Store
+
+# ENV
+.env*
+*.env
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+assets/postman
+/postman
