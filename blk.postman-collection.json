@@ -1,0 +1,4056 @@
+{
+	"info": {
+		"_postman_id": "678b5d96-4c58-4e2e-8e22-c253459eeb3b",
+		"name": "blk",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12896539"
+	},
+	"item": [
+		{
+			"name": "BLKBook",
+			"item": [
+				{
+					"name": "addbook",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simpl\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/new",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single book",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/single/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"single",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "e6ab284f-6e6a-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update book",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"12345 67 7So after 'rewatching \\\"the\\\" last episode of raising kanan i have a few questions, why’d it take sal so long to respond do you guys think that in season 3 we’ll...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "beadcb8b-6fa2-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "like book",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/like/:bookId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"like",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "3bd9bc33-6451-11ed-8493-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "follow",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/follow/:bookId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"follow",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "e6ab284f-6e6a-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unfollow",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/follow/:bookId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"follow",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "e6ab284f-6e6a-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "dislike book",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"12345 67 7So after rewatching the last episode of raising kanan i have a few questions, why’d it take sal so long to respond do you guys think that in season 3 we’ll...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/dislike/:bookId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"dislike",
+								":bookId"
+							],
+							"variable": [
+								{
+									"key": "bookId",
+									"value": "3bd9bc33-6451-11ed-8493-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete book",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "beadcb8b-6fa2-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blkbooks",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blkbooks/listing/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blkbooks",
+								"listing",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "addcomment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									" //time_stories, books"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"time_stories\",\r\n    \"comment_text\": \"Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simple\",\r\n    \"post_id\": \"5ee54780-6835-11ed-9b9e-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/comments/new",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"new"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/comments/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3d88ff3b-683b-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comments",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"books\",\r\n    \"post_id\": \"9db36d53-6c8b-11ed-9201-02c0e9805953\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/comments/listing/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"comments",
+								"listing",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Stories BLK Top",
+			"item": [
+				{
+					"name": "addstory",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"[HIRING] repost - looking for a character designer to generate roughly 100 unique assets to be uniquely combined to generate over 8000 assets for a web 3 project with some of the project already started.\",\r\n    \"image\": \"\",\r\n    \"parent_story\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/new",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/single/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"single",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3a3cafed-659d-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"12345 67 7So after rewatching the last episode of raising kanan i have a few questions, why’d it take sal so long to respond do you guys think that in season 3 we’ll...\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1b1966a1-69d6-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fav story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/fav/:storyId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"fav",
+								":storyId"
+							],
+							"variable": [
+								{
+									"key": "storyId",
+									"value": "a33113c3-6e6a-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repost story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"12345 67 7So after rewatching the last episode of raising kanan i have a few questions, why’d it take sal so long to respond do you guys think that in season 3 we’ll...\",\r\n    \"image\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/repost/:storyId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"repost",
+								":storyId"
+							],
+							"variable": [
+								{
+									"key": "storyId",
+									"value": "a33113c3-6e6a-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1b1966a1-69d6-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stories",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"both\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/listing/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"listing",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "stories by User",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"both\",\r\n    \"userId\": \"de32dd2b-6450-11ed-8493-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/listing_by_user/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"listing_by_user",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "blk board stories by User",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"frame\",\r\n    \"userId\": \"e87c2ca6-6bcf-11ed-9201-02c0e9805953\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/stories/blkboard_by_user/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"stories",
+								"blkboard_by_user",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/profile/:userId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "e1747592-6450-11ed-8493-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit profile",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"JasmineDominque__\",\r\n    \"fullname\": \"Jasmine Dominique\",\r\n    \"phone\": \"(453) 234-5676\",\r\n    \"dob\": \"1985-11-19\",\r\n    \"bio\": \"Artist, producer, Engineer. Ive worked with many artist and have credits on various albums\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/profile/update",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "block user",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blockedUserId\": \"e87c2ca6-6bcf-11ed-9201-02c0e9805953\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/blockList/new",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"blockList",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "block list",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/blockList",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"blockList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete block",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blockedUserId\": \"3f55fe58-6bf2-11ed-9201-02c0e9805953\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/blockList/delete",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"blockList",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Settings update",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"show_online\": true,\r\n    \"push_notification\": true,\r\n    \"sms_notification\": true,\r\n    \"email_notification\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/profile/settings",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"old_password\": \"Qwerty!23\",\r\n    \"password\": \"Qwerty!2\",\r\n    \"confirm_password\": \"Qwerty!2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/profile/change_password",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"change_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"I am facing some issue.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/report",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Friends",
+			"item": [
+				{
+					"name": "invite",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receiver_user_id\": \"de32dd2b-6450-11ed-8493-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/invite",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "answer invite",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"answer\": \"Accept\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/answer_invite/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"answer_invite",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9d5fb9c1-77c1-11ed-a7fe-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unfriend",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"friend_id\": \"e1747592-6450-11ed-8493-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/user/unfriend",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"unfriend"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BLK Talk",
+			"item": [
+				{
+					"name": "seaerch recipients",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blktalks/search_recipients?q= n",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blktalks",
+								"search_recipients"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": " n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Open thread",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"recipient_user_id\": \"d9d517b0-6450-11ed-8493-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blktalks/thread",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blktalks",
+								"thread"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "thread messages",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"threadId\": \"969349e4-677a-11ed-9b9e-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blktalks/thread_messages/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blktalks",
+								"thread_messages",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check new thread messages",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"threadId\": \"969349e4-677a-11ed-9b9e-3ca82ab629a0\",\r\n    \"lastMessageId\": \"733b4021-71a5-11ed-9b9e-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blktalks/thread_new_message",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blktalks",
+								"thread_new_message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create message",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"thread_id\": \"969349e4-677a-11ed-9b9e-3ca82ab629a0\",\r\n    \"message_text\": \"Yes, but it was expected im just happy its over now.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/blktalks/message",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"blktalks",
+								"message"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Time stories",
+			"item": [
+				{
+					"name": "time story user profile",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/user_profile/:userId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"user_profile",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "userId",
+									"value": "3f55fe58-6bf2-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"[HIRING] repost - looking for a character designer to generate roughly 100 unique assets to be uniquely combined to generate over 8000 assets for a web 3 project with some of the project already started.\",\r\n    \"video\": \"fsdf dfsd\",\r\n    \"expiring_on\": \"2022-12-09 00:00:00\",\r\n    \"parent_story\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/new",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/single/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"single",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4aa0397a-69d6-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"12345 67 7So after rewatching the last episode of raising kanan i have a few questions, why’d it take sal so long to respond do you guys think that in season 3 we’ll...\",\r\n    \"video\": \"fsdfdfsd\",\r\n    \"expiring_on\": \"2022-12-09 00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3e9630fc-72e2-11ed-9201-02c0e9805953"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fav time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/fav/:storyId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"fav",
+								":storyId"
+							],
+							"variable": [
+								{
+									"key": "storyId",
+									"value": "4aa0397a-69d6-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "repost time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"12345 67 7So after rewatching the last episode of raising kanan i have a few questions, why’d it take sal so long to respond do you guys think that in season 3 we’ll...\",\r\n    \"expiring_on\": \"2022-12-09 00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/repost/:storyId",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"repost",
+								":storyId"
+							],
+							"variable": [
+								{
+									"key": "storyId",
+									"value": "5ee54780-6835-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4aa0397a-69d6-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "time stories",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/listing/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"listing",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "time stories by user",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"de32dd2b-6450-11ed-8493-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/listing_by_user/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"listing_by_user",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "views update time story",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/time_stories/viewed/:id",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"time_stories",
+								"viewed",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4aa0397a-69d6-11ed-9b9e-3ca82ab629a0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Notifications",
+			"item": [
+				{
+					"name": "User Notifications",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/notifications/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"notifications",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Activities",
+			"item": [
+				{
+					"name": "User Activity",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"d9d517b0-6450-11ed-8493-3ca82ab629a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/api/activities/:page",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"activities",
+								":page"
+							],
+							"variable": [
+								{
+									"key": "page",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin panel",
+			"item": [
+				{
+					"name": "templates",
+					"item": [
+						{
+							"name": "Add Template",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"NEW_TIME_STORY_REPOST_NOTIFICATION\",\r\n    \"description\": \"{{fullname}} reposted your video\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/templates/new",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"templates",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Template list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"All\",\r\n    \"status\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/templates/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"templates",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Template",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"NEW_COMMENT_NOTIFICATION\",\r\n    \"description\": \"<{fullname}> commented on your post, \\\"<{comment_text}>..\\\"\",\r\n    \"status\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/templates/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"templates",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "5f1c6836-68f1-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin User Management",
+					"item": [
+						{
+							"name": "add admin user",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"chknabeel@hotmail.com\",\n    \"password\": \"Qwerty!2\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/admin_users/add_user",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"admin_users",
+										"add_user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "admin users list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/admin_users/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"admin_users",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Inactive\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/admin_users/status/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"admin_users",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "0a0748da-68aa-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Inactive\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/admin_users/delete/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"admin_users",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "0a0748da-68aa-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "list users",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"All\",\r\n    \"verification_status\": \"All\",\r\n    \"email_verified\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/users/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"users",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "users book following",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/users/book_followings/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"users",
+										"book_followings",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user block list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/users/blockList/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"users",
+										"blockList",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verification status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"verification_status\": \"Verified\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/users/verification_status/:userId",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"users",
+										"verification_status",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "d9d517b0-6450-11ed-8493-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Inactive\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/users/status/:userId",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"users",
+										"status",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "d9d517b0-6450-11ed-8493-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/users/delete/:userId",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"users",
+										"delete",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "d9d517b0-6450-11ed-8493-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"time_stories\",\r\n    \"status\": \"All\",\r\n    \"post_id\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/comments/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"comments",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/comments/status/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"comments",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "550e4219-683b-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/comments/delete/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"comments",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "550e4219-683b-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Blk Books",
+					"item": [
+						{
+							"name": "book list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/blkbooks/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"blkbooks",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/blkbooks/status/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"blkbooks",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3bd9bc33-6451-11ed-8493-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/blkbooks/delete/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"blkbooks",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3bd9bc33-6451-11ed-8493-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "stories",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"both\",\r\n    \"status\": \"All\",\r\n    \"created_by\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/stories/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"stories",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/stories/status/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"stories",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1b1966a1-69d6-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/stories/delete/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"stories",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "1b1966a1-69d6-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "timestories",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"All\",\r\n    \"created_by\": \"All\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/timestories/list/:page",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"timestories",
+										"list",
+										":page"
+									],
+									"variable": [
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "status update",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"Active\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/timestories/status/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"timestories",
+										"status",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4aa0397a-69d6-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "oauth2",
+									"oauth2": [
+										{
+											"key": "addTokenTo",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{LOCALHOST}}/admin-panel/api/timestories/delete/:id",
+									"host": [
+										"{{LOCALHOST}}"
+									],
+									"path": [
+										"admin-panel",
+										"api",
+										"timestories",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "4aa0397a-69d6-11ed-9b9e-3ca82ab629a0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"chknabeel@hotmail.com\",\n    \"password\": \"Qwerty!2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCALHOST}}/admin-panel/api/login",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"admin-panel",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "oauth2",
+				"oauth2": [
+					{
+						"key": "addTokenTo",
+						"value": "header",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "CF requests",
+			"item": [
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/nabeelshafique/Downloads/BLKBOOK CREATE POST.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://upload.imagedelivery.net/u_K8xVU5HHw0tPnMQkZP3g/66922173-c121-4b97-e3cf-d26a20521300",
+							"protocol": "https",
+							"host": [
+								"upload",
+								"imagedelivery",
+								"net"
+							],
+							"path": [
+								"u_K8xVU5HHw0tPnMQkZP3g",
+								"66922173-c121-4b97-e3cf-d26a20521300"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload video",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/nabeelshafique/Desktop/Screen Recording 2022-11-09 at 6.04.52 PM.mov"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://upload.videodelivery.net/22e6379e608745f2b78ab89617aa4d7b",
+							"protocol": "https",
+							"host": [
+								"upload",
+								"videodelivery",
+								"net"
+							],
+							"path": [
+								"22e6379e608745f2b78ab89617aa4d7b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one time upload url",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.cloudflare.com/client/v4/accounts/d37032e233d5a7388d17649309f1dbcf/images/v2/direct_upload",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cloudflare",
+								"com"
+							],
+							"path": [
+								"client",
+								"v4",
+								"accounts",
+								"d37032e233d5a7388d17649309f1dbcf",
+								"images",
+								"v2",
+								"direct_upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get one time video upload url",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"maxDurationSeconds\": 3600\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.cloudflare.com/client/v4/accounts/d37032e233d5a7388d17649309f1dbcf/stream/direct_upload",
+							"protocol": "https",
+							"host": [
+								"api",
+								"cloudflare",
+								"com"
+							],
+							"path": [
+								"client",
+								"v4",
+								"accounts",
+								"d37032e233d5a7388d17649309f1dbcf",
+								"stream",
+								"direct_upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload",
+			"item": [
+				{
+					"name": "get Upload URL",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/api/upload/image/url",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"upload",
+								"image",
+								"url"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get video Upload URL",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{LOCALHOST}}/api/upload/video/url",
+							"host": [
+								"{{LOCALHOST}}"
+							],
+							"path": [
+								"api",
+								"upload",
+								"video",
+								"url"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Push Notifications",
+			"item": [
+				{
+					"name": "sameple push notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "api.sandbox.push.apple.com:443",
+							"host": [
+								"api",
+								"sandbox",
+								"push",
+								"apple",
+								"com"
+							],
+							"port": "443"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ahmad9@hotmail.com\",\n    \"password\": \"Qwerty!2\",\n    \"phone\": \"(453) 234-5676\",\n    \"dob\": \"11/09/2022\",\n    \"device_token\": \"sdsdfdsdfsdgfhgfdsgsdfsdfdsf\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}/api/new",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"ahmad1@hotmail.com\",\n    \"password\": \"Qwerty!2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}/api/login",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify email",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ahmad9@hotmail.com\",\r\n    \"email_verification_key\": \"lbml2xbuln8zu47qk9\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}/api/email-verification",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"email-verification"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "forgot password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ahmad1@hotmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}/api/forgot-password",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Qwerty!2\",\r\n    \"confirm_password\": \"Qwerty!2\",\r\n    \"reset_password_key\": \"lbmjtm1q1r208blrtn8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LOCALHOST}}/api/reset-password",
+					"host": [
+						"{{LOCALHOST}}"
+					],
+					"path": [
+						"api",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "localhost"
+		},
+		{
+			"key": "PORT",
+			"value": "3002"
+		},
+		{
+			"key": "WEBHOST",
+			"value": "https://blkbox.winnyweb.com",
+			"type": "string"
+		},
+		{
+			"key": "LOCALHOST",
+			"value": "http://blkboxtest-env.eba-u3majsyf.us-west-1.elasticbeanstalk.com",
+			"type": "string"
+		},
+		{
+			"key": "ACCESS_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJlMTc0NzU5Mi02NDUwLTExZWQtODQ5My0zY2E4MmFiNjI5YTAiLCJpYXQiOjE2Njk2NDE1ODgsImV4cCI6MTY2OTcyNzk4OH0.VSg1Qdg9sU1GC9a8bgDaMiYv2OlUrbJc_MWrjAucJ4A",
+			"type": "string"
+		},
+		{
+			"key": "ADMIN_ACCESS_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIwYTA3NDhkYS02OGFhLTExZWQtOWI5ZS0zY2E4MmFiNjI5YTAiLCJpYXQiOjE2NjkxNDQxNzEsImV4cCI6MTY2OTIzMDU3MX0.D9kq5yg7mc3yPgziMl_WIw4wmvivn7e6tvbXhlenh7w",
+			"type": "string"
+		},
+		{
+			"key": "CF_ACCESS_TOKEN",
+			"value": "ihfrzz4qSltwGGqwdTPDPT5GTNNeLT5sGvv8m5vQ",
+			"type": "string"
+		},
+		{
+			"key": "CF_VIDEO_TOKEN",
+			"value": "359YFemRsVlTgeEPLrIDSiKOEYfdgYZCxoVse-Ey",
+			"type": "string"
+		}
+	]
+}
